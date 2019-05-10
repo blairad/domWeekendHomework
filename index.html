@@ -8,42 +8,44 @@
     </head>
 
     <body>
-        <div id="form-container">
-        <div class="characterName">
-        <h2>Character Name</h2>
-        <form id="form">
-            <label for="First-Name">First Name</label>
-            <input type="text" id="First-Name">
+        <form id="new-item-form">
+            <div id="form-wrapper">
+                <h2>Character Name</h2>
+                <div class="form-tem">
+                    <label for="First-Name">First Name</label>
+                    <input type="text" id="First-Name">
 
-            <label for="Last-Name">Last Name</label>
-            <input type="text" id="Last-Name">
-        </div>
+                    <label for="Last-Name">Last Name</label>
+                    <input type="text" id="Last-Name">
+                </div>
         
-        <div class="Show">
-            <h2>Show</h2>
-            <select id="select">
-            <option disabled selected>Which show are they in?</option>
-            <option value="The Wire">The Wire</option>
-            <option value="The Sopranos">The Sopranos</option>
-            <option value="Deadwood">Deadwood</option>
-            </select>
-        </div>
-
-        <div class="Occupation"></div>
-        <h2>Occupation</h2>
-        <form id="form">
-            <label for="Occupation">Occupation</label>
-            <input type="text" id="Occupation">
+                <h2>Show</h2>
+                <div class="form-item">
+                    <select id="select">
+                        <option disabled selected>Which show are they in?</option>
+                        <option value="The Wire">The Wire</option>
+                        <option value="The Sopranos">The Sopranos</option>
+                        <option value="Deadwood">Deadwood</option>
+                    </select>
+                </div>
+        
+                <h2>Occupation</h2>
+                <div class ="form-item">
+                    <label for="Occupation">Occupation</label>
+                    <input type="text" id="Occupation">
+                </div>
+                <br>
+                <br>
+                <input type="submit" value="save"/>
+                <br>
+                <br>
+                <button id="Delete All">Avada Kedavra</button>
+            </div>
         </form>
-        <br>
-        <br>
-        <input type="submit" value="save"/>
-        <br>
-        <br>
-        <button id="Delete All">Avada Kedavra</button>
-        </form>
+        
+        <h1>Character List</h1>
+            <ul id="character-list"></ul>
 
-    </div>
     </body>
 
 
