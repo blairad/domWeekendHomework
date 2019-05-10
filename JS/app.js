@@ -3,21 +3,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const form = document.querySelector('#new-item-form');
     form.addEventListener('submit', handleSubmitForm );
-
-
 })
 
     const handleSubmitForm = function (event) {
         event.preventDefault();
     
+        const characterListItem = createCharacterListItem(event.target);
+        const characterList = document.querySelector('#character-list');
+        characterList.appendChild(characterListItem);
 
-    const characterList = document.createElement('li');
-    characterList.classList.add('li');
+        event.target.reset();
 
-    const list = document.querySelector('ul');
-    list.appendChild(characterList);
+    }
+
+        const createCharacterListItem = function (form) {
+            const characterListItem = document.createElement('li');
+            characterListItem.classList.add('character-list-item');
+            return characterListItem;
+        }
+    // const list = document.querySelector('ul');
+    // list.appendChild(characterList);
+
+    // const firstNameElement = document.createElement('h2');
+    // firstNameElement.textContent = `${event.target.firstName.value}`
+    // firstNameElement.classList.add('h2');''
 
 
 
 
-}
+
+
+
