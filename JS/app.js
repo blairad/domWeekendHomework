@@ -8,28 +8,50 @@ document.addEventListener('DOMContentLoaded', () => {
     const handleSubmitForm = function (event) {
         event.preventDefault();
     
-        const characterListItem = createCharacterListItem(event.target);
-        const characterList = document.querySelector('#character-list');
-        characterList.appendChild(characterListItem);
 
+        const characterListItem = document.createElement('li');
+        characterListItem.classList.add('li');
+
+        const list = document.querySelector('ul');
+        list.appendChild(characterListItem);
+        
+        const firstName = document.createElement('h2');
+        firstName.textContent = `${event.target.firstName.value} `
+        firstName.classList.add('h2');
+
+        const lastName = document.createElement('h2');
+        lastName.textContent = `${event.target.lastName.value}`
+        lastName.classList.add('h2');
+        
+        const showTitle = document.createElement('h3');
+        showTitle.textContent = `${event.target.show.value}`
+        showTitle.classList.add('h3');
+
+        const characterOccupation = document.createElement('p');
+        characterOccupation.textContent = `${event.target.Occupation.value}`
+        characterOccupation.classList.add('p');
+
+        characterListItem.appendChild(firstName); 
+        characterListItem.appendChild(lastName);
+        characterListItem.appendChild(showTitle);
+        characterListItem.appendChild(characterOccupation);
+        
         event.target.reset();
-
-    }
-
-        const createCharacterListItem = function (form) {
-            const characterListItem = document.createElement('li');
-            characterListItem.classList.add('character-list-item');
-            return characterListItem;
         }
-    // const list = document.querySelector('ul');
-    // list.appendChild(characterList);
 
-    // const firstNameElement = document.createElement('h2');
-    // firstNameElement.textContent = `${event.target.firstName.value}`
-    // firstNameElement.classList.add('h2');''
+    // const handelDeleteAllClick = function (event){
+    // const characterListItem = document.querySelector('#DeleteAll');
+    // characterListItem.innerHTML = '' ;
 
 
+//         var btn = document.getElementById('btn');
+//         btn.onclick = function () {
+//             document.getElementById('DeleteAll').remove();
+//             this.remove();
+// };
 
+        
+    
 
 
 
