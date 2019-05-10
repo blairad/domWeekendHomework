@@ -3,7 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const form = document.querySelector('#new-item-form');
     form.addEventListener('submit', handleSubmitForm );
+
+    const deleteAllButton = document.querySelector('#deleteAll');
+    deleteAllButton.addEventListener('click', handleDeleteAllClick);
 })
+
+
 
     const handleSubmitForm = function (event) {
         event.preventDefault();
@@ -39,10 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
         event.target.reset();
         }
 
-    // const handelDeleteAllClick = function (event){
-    // const characterListItem = document.querySelector('#DeleteAll');
-    // characterListItem.innerHTML = '' ;
-
+    // const handelDeleteAllClick = function (event) {
+    // const list = document.querySelector('#character-list');
+    // list.innerHTML = '' ;
+    // }
 
 //         var btn = document.getElementById('btn');
 //         btn.onclick = function () {
@@ -50,9 +55,13 @@ document.addEventListener('DOMContentLoaded', () => {
 //             this.remove();
 // };
 
-        
+    const handleDeleteAllClick = function (){
+    const deleteList = document.getElementById('character-list');
+   while (deleteList.firstChild) {
+      deleteList.removeChild(deleteList.firstChild);
+   }
     
 
 
 
-
+    }
