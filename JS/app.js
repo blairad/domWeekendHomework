@@ -49,9 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // list.innerHTML = '' ;
     // }
 
-//         var btn = document.getElementById('btn');
-//         btn.onclick = function () {
-//             document.getElementById('DeleteAll').remove();
+//         var button = document.getElementById('character-list');
+//         button.onclick = function () {
+//             document.getElementById('character-list').remove();
 //             this.remove();
 // };
 
